@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'poppins', sans-serif;
+    list-style: none;
+}
+
+body {
+    color: #ededed;
+    background: #081b29;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #051129;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    animation: slideRight .5s ease forwards;
+}
+.navbar{
+    display: flex;
+    gap: 35px;
+    line-height: 1.5;
+    /*
+    display: inline-block;
+    line-height: 0px;
+    margin: 0 5px;*/
+}
+.navbar a{
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+
+}
+
+.navbar a:hover {
+    color: #0ef;
+}
+
+.menu-toggle {
+    display: none; /* Hide by default */
+    font-size: 24px; 
+    background: none; 
+    border: none; 
+    color: white; 
+    cursor: pointer; 
+}
+@media (max-width: 768px) {
+    /* Hide the navbar by default on mobile */
+    .navbar {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 60px; /* Below the header */
+        right: 10%; /* Align with header padding */
+        background: #051129; /* Same as header */
+        padding: 10px; /* Padding for each link */
+    }
+
+    /* Toggle button visibility on mobile */
+    .menu-toggle {
+        display: block; /* Display on mobile */
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Navbar visibility when open */
+    .navbar.open {
+        display: flex; /* Show when 'open' class is applied */
+    }
+    
+}
+.container{
+    position: relative;
+    top: 125px;
+}
+
+
+select,input,button{
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px){
+    .logo{
+        display: none;
+    }
+}
